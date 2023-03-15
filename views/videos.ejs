@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Video List</title>
+</head>
+
+<body>
+    <h1>My Video List</h1>
+    <% if (videos.length===0) { %>
+        <p>No videos found.</p>
+        <% } else { %>
+            <ul>
+                <% videos.forEach((video)=> { %>
+                    <li>
+                        <img src="<%= video.thumbnailUrl %>" alt="<%= video.key %>">
+                        <%= video.url %>
+                    </li>
+                    <% }); %>
+            </ul>
+            <% } %>
+</body>
+
+</html>
